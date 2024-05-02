@@ -204,4 +204,89 @@ h4 {
     position: relative; /* Necesario para z-index */
 }
 
+/* QUINTA DIVISION */
+.fifth {
+    background: #ffffff; /* Fondo blanco */
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente por defecto */
+    align-items: center; /* Centra las imágenes verticalmente */
+    position: relative; /* Posicionamiento relativo para los elementos internos */
+}
 
+.image-one, .image-two {
+    position: absolute; /* Posicionamiento absoluto para control individual */
+    /* Utiliza 'left' o 'right' para ajustar la posición horizontal de cada imagen */
+}
+
+.image-one {
+    left: 45%; /* Ajusta este valor para mover la imagen más a la izquierda o derecha */
+    top: 20%; /* Posiciona la imagen más arriba */
+}
+
+.image-two {
+    left: 55%; /* Ajusta este valor para mover la imagen más a la izquierda o derecha */
+    bottom: 20%; /* Posiciona la imagen más abajo */
+}
+
+.image-one img, .image-two img {
+    width: auto; /* Ajusta el ancho según el contenido de la imagen */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    max-width: 40%; /* Limita el tamaño máximo de las imágenes */
+}
+
+
+/* Ajustes adicionales para pantallas más pequeñas (tablets y móviles) */
+@media (max-width: 768px) {
+    header, .division, .third, .fourth, .fifth {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .corner-image, .logo {
+        position: static;
+        margin: 10px auto; /* Centrado y con margen */
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 1.5em; /* Reduce el tamaño de la fuente para pantallas pequeñas */
+        padding: 10px;
+        text-align: center; /* Asegura que el texto esté centrado */
+        max-width: 100%;
+    }
+
+    .button-section, .logo-section {
+        width: 100%; /* Asegura que los botones y logos ocupen toda la anchura */
+        position: static;
+        display: block;
+        text-align: center;
+    }
+
+    button {
+        width: 80%; /* Hace los botones más anchos y fáciles de tocar */
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .image-left, .image-right, .image-one, .image-two {
+        position: static;
+        width: 100%; /* Hace que las imágenes sean más grandes y visibles */
+        margin: 20px 0; /* Añade espacio vertical entre las imágenes */
+    }
+
+    .image-left img, .image-right img, .image-one img, .image-two img {
+        max-width: 100%; /* Asegura que las imágenes no desborden el contenedor */
+    }
+}
+
+/* Ajustes adicionales para teléfonos móviles */
+@media (max-width: 480px) {
+    h1, h2, h3, h4 {
+        font-size: 1.2em; /* Reduce aún más el tamaño de la fuente */
+    }
+
+    button {
+        padding: 10px; /* Reduce el padding para ahorrar espacio */
+    }
+}
